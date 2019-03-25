@@ -4,5 +4,4 @@ do
 read a
 count=$((count+a))
 done
-count=$((count/n))
-printf "%.3f\n" "$count"
+printf '%.3f\n' $(echo "$count/$n" | bc -l)
